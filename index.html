@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>PLS DONATE Calculator - Robux Earnings Estimator</title>
+
+  <meta name="description"
+    content="Free PLS DONATE calculator to estimate Robux earnings after tax, including split donations." />
+
+  <meta name="keywords"
+    content="PLS DONATE calculator, robux tax calculator, donation earnings roblox" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript File -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <h1>🎁 PLS DONATE Booth Calculator</h1>
+  <p class="subtitle">Estimate your Robux earnings like a pro</p>
+
+  <!-- DARK MODE BUTTON -->
+  <button class="darkBtn" onclick="toggleDark()">🌙 Toggle Dark Mode</button>
+
+  <!-- ONE TIME DONO -->
+  <div class="boothCard">
+    <h2>💰 One-Time Donation</h2>
+
+    <input type="number" id="oneDono" placeholder="Enter donation amount" />
+
+    <button class="mainBtn" onclick="calculateOne()">Calculate</button>
+
+    <div class="output" id="oneOutput"></div>
+  </div>
+
+  <!-- SPLIT DONO -->
+  <div class="boothCard">
+    <h2>🎉 Split Donations</h2>
+
+    <div id="splitContainer">
+      <input type="number" class="split" placeholder="Donation 1" />
+      <input type="number" class="split" placeholder="Donation 2" />
+      <input type="number" class="split" placeholder="Donation 3" />
+    </div>
+
+    <button class="addBtn" onclick="addBox()">➕ Add Donation</button>
+    <button class="mainBtn" onclick="calculateSplit()">Calculate Total</button>
+
+    <div class="output" id="splitOutput"></div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="boothCard">
+    <h2>📜 Saved History</h2>
+    <ul id="history"></ul>
+
+    <button class="clearBtn" onclick="clearHistory()">🗑 Clear History</button>
+  </div>
+
+  <button class="copyBtn" onclick="copyLast()">📋 Copy Last Result</button>
+
+</body>
+</html>
